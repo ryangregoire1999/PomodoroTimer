@@ -14,6 +14,9 @@ public class Timer {
         System.out.println("Enter Minutes to Stop: ");
         int continueMinutes = scan.nextInt();
 
+        System.out.println("Enter days to Continue: ");
+        int daysContinue = scan.nextInt();
+
         int i = 1;
         while(i > 0) {
             i += 1;
@@ -27,6 +30,11 @@ public class Timer {
 
                 }
                 minutes += continueMinutes;
+
+                if (i == m.Days(continueMinutes)) {
+                    Toolkit.getDefaultToolkit().beep();
+                    System.out.println("Timer... Done");
+                }
 
             } catch( Exception ce) {
                 System.out.println(ce.getMessage());
