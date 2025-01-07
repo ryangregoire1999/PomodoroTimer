@@ -12,7 +12,7 @@ public class Calculations {
     public static int Days(int a) {
         short days = 0;
         short seconds = 0;
-        days += 1;
+        days += 7;
         seconds += (short) ((short) (short)days * 24 * a * 60);
 
         return seconds;
